@@ -15,6 +15,7 @@ const Navbar = () => {
         />
 
         <p className='text-[26px] font-extrabold text-white max-sm:size-10'>Oc Meet</p>
+        <p>something</p>
       </Link>
     </nav>
   )

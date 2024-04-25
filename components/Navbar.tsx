@@ -1,11 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import MobileNav from './MobileNav'
+import { SignOutButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
 const Navbar = () => {
   return (
     <nav className='flex-between fixed z-50 w-full bg-dark-1 px-6 py-4 lg:px-10'>
-      <Link href={'/'} className='flex items-center gap-1'>
+      <Link href={'/'} className='flex  items-center gap-1'>
         <Image
           src="/icons/logo.svg"
           width={32}
@@ -13,10 +15,18 @@ const Navbar = () => {
           alt='ocMeet'
           className='max-sm:size-10'
         />
-
-        <p className='text-[26px] font-extrabold text-white max-sm:size-10'>Oc Meet</p>
-        <p>something</p>
       </Link>
+
+        <p className='text-[26px] font-extrabold text-white max-sm:size-10'>OcMeet</p>
+        <div className='flex-between gap-5'>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          <SignedOut>
+            <SignOutButton/>
+          </SignedOut>
+          <MobileNav />
+        </div>
     </nav>
   )
 }

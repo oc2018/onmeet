@@ -1,7 +1,7 @@
 "use client"
 
-import { DeviceSettings, VideoPreview, useCall } from '@stream-io/video-react-sdk'
-import React, { useEffect, useState } from 'react'
+import { DeviceSettings, VideoPreview, useCall } from '@stream-io/video-react-sdk';
+import React, { useEffect, useState } from 'react';
 import { Button } from './ui/button';
 
 const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: boolean) => void }) => {
@@ -48,4 +48,4 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
   )
 }
 
-export default MeetingSetup
+export default MeetingSetup;
